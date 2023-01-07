@@ -2,3 +2,10 @@
   width: 82%;
   // background-color: aqua;
 }
+
+
+@media (max-width:1250px) {
+  .main-content{
+    width: 100%;
+  }
+}

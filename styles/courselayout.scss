@@ -37,8 +37,8 @@
     .about__course {
       background-color: #fff;
       margin-top: 25px;
-      padding: 30px;
-      border-radius: 6px;
+      padding: 30px 30px 16px;
+      border-radius: 6px 6px 0 0;
       &__top {
         display: flex;
         justify-content: space-between;
@@ -247,14 +247,173 @@
             color: #fff;
             font-size: 12px;
             cursor: pointer;
-            &:last-child{
+            &:last-child {
               background-color: #fff;
               color: #3b434e;
-              border: 1px solid #EBEBEB;
+              border: 1px solid #ebebeb;
             }
           }
         }
       }
+    }
+    .about__course__comment {
+      background-color: #f9f8ff;
+      padding: 30px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+      &__top {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        h4.user__name {
+          font-size: 14px;
+          color: #3b434e;
+        }
+        .user__icon {
+          .icon {
+            font-size: 26px;
+            color: #7653fc;
+          }
+        }
+      }
+      &__txt {
+        font-size: 13px;
+        color: #3b434e;
+        margin-top: 10px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ebebeb;
+      }
+      .comment__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 16px;
+        textarea {
+          width: 100%;
+          resize: none;
+        }
+        input,
+        textarea {
+          padding: 6px 10px;
+          background: #ffffff;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          &::placeholder {
+            color: #a4a4a4;
+          }
+        }
+        &__top {
+          display: flex;
+          gap: 20px;
+        }
+        .btn {
+          background-color: #7653fc;
+          padding: 8px 26px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .course-layout-wrapper {
+    padding: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .course-layout-wrapper {
+    .course-layout {
+      .about__course {
+        &__top {
+          flex-direction: column;
+          gap: 30px;
+        }
+        &__body {
+          &__details {
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 20px;
+            &__left,
+            &__right {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .course-layout-wrapper {
+    .course-layout {
+      .course__top {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .about__course {
+        padding: 12px;
+        &__top {
+          flex-direction: column;
+          gap: 30px;
+          &__left {
+            .course__img {
+              width: 50px;
+              height: 50px;
+            }
+            .course__top__title {
+              font-size: 16px !important;
+            }
+          }
+        }
+        &__body {
+          &__details {
+            flex-direction: column;
+            margin-top: 20px;
+            gap: 20px;
+            &__left,
+            &__right {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .about__course__comment {
+      padding: 12px !important;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .course-layout-wrapper {
+    padding: 20px 10px;
+    .course-layout {
+      .about__course {
+        &__top {
+          &__right {
+            // flex-direction: column;
+            gap: 20px;
+            .cost__top{
+              font-size: 16px !important;
+            }
+            .stars{
+              .star{
+                font-size: 16px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about__course__comment {
+      padding: 12px !important;
     }
   }
 }

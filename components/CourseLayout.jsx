@@ -3,6 +3,7 @@ import { MdSort } from "react-icons/md";
 import Image from "next/image";
 
 import { BsFillTrophyFill, BsFillStarFill } from "react-icons/bs";
+import { BiUserCircle } from "react-icons/bi";
 
 function CourseLayout({ info }) {
   return (
@@ -94,7 +95,7 @@ function CourseLayout({ info }) {
                   </div>
                   <div className="item">
                     <h5 className="item__title">Длительность</h5>
-                    <div className="dots">  </div>
+                    <div className="dots"> </div>
                     <p className="item__value">5 месяцев</p>
                   </div>
                   <div className="item last">
@@ -121,10 +122,33 @@ function CourseLayout({ info }) {
               </div>
             </div>
             <div className="about__course__body__btns">
-              <button className="about__course__body__btns__btn">Узнать подробнее</button>
-              <button className="about__course__body__btns__btn">Читать отзывы</button>
+              <button className="about__course__body__btns__btn">
+                Узнать подробнее
+              </button>
+              <button className="about__course__body__btns__btn">
+                Читать отзывы
+              </button>
             </div>
           </div>
+        </div>
+        <div className="about__course__comment">
+          <div className="about__course__comment__top">
+            <div className="user__icon">
+              <BiUserCircle className="icon" />
+            </div>
+            <h4 className="user__name">{info.comment__owner}</h4>
+          </div>
+          <p className="about__course__comment__txt">
+            {info.comment__txt}
+          </p>
+          <form className="comment__form">
+            <div className="comment__form__top">
+              <input type="text" placeholder="Имя" />
+              <input type="text" placeholder="Заголовок отзыва" />
+            </div>
+            <textarea placeholder="Текст отзыва" rows="10"></textarea>
+            <button className="btn">Отправить</button>
+          </form>
         </div>
       </div>
     </div>
