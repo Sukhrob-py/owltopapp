@@ -7,5 +7,7 @@
 @media (max-width:1250px) {
   .main-content{
     width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 }
